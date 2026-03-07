@@ -70,7 +70,7 @@
   /* ─── HERO ─── */
   .hero {
     background: linear-gradient(155deg, #FAFBFD 0%, #F0F3F8 50%, #E8EDF5 100%);
-    padding: 72px 24px 80px;
+    padding: 64px 24px 64px;
     text-align: center;
     position: relative; overflow: hidden;
   }
@@ -97,7 +97,7 @@
     width: 88px; height: 88px; object-fit: contain;
     display: block; flex-shrink: 0;
     margin-bottom: 20px;
-    animation: fadeInUp 0.6s ease both;
+    
   }
   .hero-tag {
     display: inline-block;
@@ -106,25 +106,25 @@
     border-radius: 100px; padding: 6px 18px;
     font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
     margin-bottom: 22px;
-    animation: fadeInUp 0.6s 0.1s ease both; opacity: 0;
+    
   }
   .hero h1 {
     font-family: 'Noto Serif TC', serif;
     font-size: clamp(22px, 5vw, 40px);
     font-weight: 600; color: var(--navy);
     line-height: 1.5; width: 100%; margin-bottom: 18px;
-    animation: fadeInUp 0.6s 0.2s ease both; opacity: 0;
+    
   }
   .hero h1 em { color: var(--gold-dark); font-style: normal; }
   .hero-sub {
     font-size: 15px; color: var(--text-muted);
     margin-bottom: 36px;
     line-height: 1.85;
-    animation: fadeInUp 0.6s 0.3s ease both; opacity: 0;
+    
   }
   .hero-actions {
     display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; width: 100%;
-    animation: fadeInUp 0.6s 0.4s ease both; opacity: 0;
+    
   }
   .btn-primary {
     background: var(--gold); color: var(--white);
@@ -147,7 +147,7 @@
   .btn-outline:hover { border-color: var(--navy); color: var(--navy-light); transform: translateY(-1px); }
 
   /* ─── SECTION COMMONS ─── */
-  section { padding: 72px 24px; }
+  section { padding: 60px 24px; }
   .section-inner { max-width: 960px; margin: 0 auto; }
   .section-label {
     font-size: 11px; font-weight: 700; letter-spacing: 0.15em;
@@ -164,7 +164,7 @@
   }
 
   /* ─── SERVICES ─── */
-  .services { background: var(--white); }
+  .services { background: var(--white); padding-top: 48px !important; }
   .services-header { margin-bottom: 44px; }
   .services-grid {
     display: grid;
@@ -207,7 +207,7 @@
   }
 
   /* ─── PROCESS ─── */
-  .process { background: var(--gray-100); }
+  .process { background: var(--gray-100); padding-top: 48px !important; padding-bottom: 48px !important; }
   .process-header { margin-bottom: 44px; }
   .process-steps {
     display: grid;
@@ -245,7 +245,7 @@
   }
 
   /* ─── TRUST ─── */
-  .trust { background: var(--white); }
+  .trust { background: var(--white); padding-top: 48px !important; padding-bottom: 48px !important; }
   .trust-header { margin-bottom: 44px; }
   .trust-grid {
     display: grid;
@@ -428,15 +428,10 @@
   .policy-section.active { display: block; }
 
   /* ─── ANIMATIONS ─── */
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(18px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  .fade-in {
-    opacity: 0; transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-  .fade-in.visible { opacity: 1; transform: translateY(0); }
+  .fade-in { opacity: 1; transform: none; }
+  .fade-in.visible { opacity: 1; transform: none; }
 
   /* ─── RESPONSIVE ─── */
   @media (max-width: 768px) {
@@ -446,7 +441,7 @@
     .nav-cta { padding: 8px 14px; font-size: 12px; }
 
     /* Hero */
-    .hero { padding: 48px 20px 56px; }
+    .hero { padding: 44px 20px 48px; }
     .hero-inner { padding: 0; }
     .hero-logo { width: 68px; height: 68px; margin-bottom: 16px; }
     .hero h1 { font-size: 22px; line-height: 1.5; }
@@ -455,7 +450,7 @@
     .btn-primary, .btn-outline { width: 100%; max-width: 100%; text-align: center; box-sizing: border-box; }
 
     /* Sections */
-    section { padding: 48px 20px; }
+    section { padding: 44px 20px; }
     .section-title { font-size: 20px; }
 
     /* Services grid */
@@ -497,7 +492,7 @@
   /* ─── DIVIDER ─── */
   .divider {
     height: 1px; background: var(--gray-200);
-    max-width: 960px; margin: 0 auto;
+    width: 100%; margin: 0;
   }
 </style>
 </head>
@@ -564,7 +559,6 @@
   </div>
 </section>
 
-<div class="divider"></div>
 
 <!-- PROCESS -->
 <section class="process" id="process">
@@ -602,7 +596,6 @@
   </div>
 </section>
 
-<div class="divider"></div>
 
 <!-- TRUST -->
 <section class="trust" id="trust">
